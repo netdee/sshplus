@@ -9,8 +9,8 @@ fun_online() {
     CURRENT_ONLINES="$(echo -e "${_onlin}" | sed -e 's/[[:space:]]*$//')"
 
     # แก้บรรทัดนี้ให้เป็น array JSON
-    echo "[{\"onlines\":\"$CURRENT_ONLINES\",\"limite\":\"250\"}]" > /var/www/html/server/online_app
-    echo "[{\"onlines\":\"$CURRENT_ONLINES\",\"limite\":\"250\"}]" > /var/www/html/server/online_app.json
+    echo "[ {\"onlines\":\"$CURRENT_ONLINES\",\"limite\":\"250\"} ]" > /var/www/html/server/online_app
+    echo "[ {\"onlines\":\"$CURRENT_ONLINES\",\"limite\":\"250\"} ]" > /var/www/html/server/online_app.json
     echo $CURRENT_ONLINES  > /var/www/html/server/online
     echo $CURRENT_ONLINES  > /var/www/html/server/online.json
 }
